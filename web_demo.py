@@ -14,8 +14,8 @@ st.set_page_config(
 
 @st.cache_resource
 def get_model():
-    tokenizer = AutoTokenizer.from_pretrained("/content/chatglm-6", trust_remote_code=True)
-    model = AutoModel.from_pretrained("/content/chatglm-6", trust_remote_code=True).half().cuda()
+    tokenizer = AutoTokenizer.from_pretrained("chatglm-6", trust_remote_code=True)
+    model = AutoModel.from_pretrained("chatglm-6", trust_remote_code=True).half().cuda()
     model = model.eval()
     return tokenizer, model
 
